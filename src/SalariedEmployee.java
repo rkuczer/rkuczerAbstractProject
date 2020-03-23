@@ -1,13 +1,12 @@
-public class SalariedEmployee extends Employee{
-
+public class SalariedEmployee  extends Employee{
     private double yearlySalary;
 
     public SalariedEmployee(double salary){
-        yearlySalary = salary;
+        yearlySalary= salary;
     }
 
     public void notAbstract(){
-        System.out.println("doing something this time.");
+        System.out.println("doing something this time");
         super.notAbstract();
     }
 

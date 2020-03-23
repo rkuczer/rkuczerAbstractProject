@@ -1,6 +1,7 @@
-public class CommissionEmployee {
+public class CommissionEmployee extends Employee{
     private int numberOfSales;
-    public static final double commission = 100; //final makes a variable unchangeable
+    //final makes a variable constant - unchangable
+    public static final double commission = 100;
 
     public CommissionEmployee(){
         numberOfSales = 0;
@@ -11,9 +12,9 @@ public class CommissionEmployee {
     }
 
     @Override
-    public double calculateBiWeeklyPay(){
+    public double calculateBiWeeklyPay() {
         var pay = 1000 + numberOfSales*commission;
-        numberOfSales = 0; //after paying commission resets
+        numberOfSales = 0;//after paying commission reset
         return pay;
     }
 }
